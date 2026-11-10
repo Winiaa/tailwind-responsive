@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse by Job Categories</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Poppins และ DM Sans (ตรงตาม Figma ต้นฉบับ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white font-sans text-brand-dark min-h-screen pt-10 pb-16 lg:pt-[70px] lg:pb-[140px] px-4 sm:px-6 lg:px-8">
+
+  <!-- ========================================================
+       MAIN CONTAINER (Figma: Desktop 1420px | Centered)
+       ======================================================== -->
+  <div class="max-w-[1420px] mx-auto w-full">
+
+    <!-- ==========================================
+         HEADING SECTION (Figma: 312x100px)
+         Typography: Poppins 700 (Bold), Size 40px, Line-height 50px, Color #183B56
+         Rectangle 701: Width 76px, Height 20px, Color #FF8345, Opacity 70%
+         Margin Bottom to Cards: 65px
+         ========================================== -->
+    <div class="text-center mb-10 lg:mb-[65px]">
+      <h2 class="font-bold text-3xl sm:text-4xl lg:text-[40px] lg:leading-[50px] tracking-normal text-brand-dark">
+        Browse by<br />
+        <span class="relative inline-block">
+          <!-- กล่องส้ม Rectangle 701: กว้าง 76px สูง 20px ซ้อนอยู่หลังคำว่า Job -->
+          <span class="absolute bottom-1.5 -left-[0px] w-[78px] h-[20px] bg-brand-orange/70 -z-10"></span>Job</span> Categories
+      </h2>
+    </div>
+
+    <!-- ==========================================
+         CARDS GRID
+         Desktop (>= 1024px): 4 Columns x 2 Rows (Card: 333x268px, Gap: 30px)
+         Tablet  (640px - 1023px): 2 Columns
+         Mobile  (< 640px): 1 Column Vertical Stack
+         ========================================== -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[30px] justify-items-center">
+
+      <!-- ==========================================
+           CARD 1: Digital Marketing
+           ========================================== -->
+      <div class="w-full max-w-[333px] h-[268px] bg-white rounded-[8px] p-[30px] border border-[#EDEDED] hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+        <!-- 80x80 px Circle Background -->
+        <div class="w-[80px] h-[80px] rounded-full bg-brand-orange/10 flex items-center justify-center">
+          <img src="img/megaphone.png" alt="Digital Marketing" class="w-10 h-10 object-contain"
+               onerror="this.onerror=null; this.src='megaphone.png';" />
+        </div>
+        <!-- Bottom: Title ขยับขึ้นบน / Jobs & Arrow อยู่ที่เดิม -->
+        <div>
+          <h3 class="font-semibold text-[20px] leading-[32px] tracking-[0.2px] text-brand-dark group-hover:text-brand-orange transition-colors -translate-y-1.5">Digital Marketing</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="font-dmsans text-[16px] text-brand-muted font-normal leading-[28px] tracking-[0px]">143 Jobs Opened</span>
+            <svg class="w-4 h-4 text-brand-dark group-hover:translate-x-1 group-hover:text-brand-orange transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CARD 2: Art & Design
+           ========================================== -->
+      <div class="w-full max-w-[333px] h-[268px] bg-white rounded-[8px] p-[30px] border border-[#EDEDED] hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+        <!-- 80x80 px Circle Background -->
+        <div class="w-[80px] h-[80px] rounded-full bg-brand-orange/10 flex items-center justify-center">
+          <img src="img/pen.png" alt="Art & Design" class="w-10 h-10 object-contain"
+               onerror="this.onerror=null; this.src='pen.png';" />
+        </div>
+        <!-- Bottom: Title ขยับขึ้นบน / Jobs & Arrow อยู่ที่เดิม -->
+        <div>
+          <h3 class="font-semibold text-[20px] leading-[32px] tracking-[0.2px] text-brand-dark group-hover:text-brand-orange transition-colors -translate-y-1.5">Art &amp; Design</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="font-dmsans text-[16px] text-brand-muted font-normal leading-[28px] tracking-[0px]">110 Jobs Opened</span>
+            <svg class="w-4 h-4 text-brand-dark group-hover:translate-x-1 group-hover:text-brand-orange transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CARD 3: Accounting (Rectangle 703: #B3BAC5 10%, Circle: #FF8345 + Shadow)
+           ========================================== -->
+      <div class="w-full max-w-[333px] h-[268px] bg-brand-accounting/10 rounded-[8px] p-[30px] border border-[#EDEDED] hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+        <!-- 80x80 px Solid Orange Circle (#FF8345) + Drop Shadow -->
+        <div class="w-[80px] h-[80px] rounded-full bg-brand-orange flex items-center justify-center shadow-[0_12px_16px_rgba(0,0,0,0.08)]">
+          <img src="img/dollar.png" alt="Accounting" class="w-10 h-10 object-contain"
+               onerror="this.onerror=null; this.src='dollar.png';" />
+        </div>
+        <!-- Bottom: Title ขยับขึ้นบน / Jobs & Arrow อยู่ที่เดิม -->
+        <div>
+          <h3 class="font-semibold text-[20px] leading-[32px] tracking-[0.2px] text-brand-dark group-hover:text-brand-orange transition-colors -translate-y-1.5">Accounting</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="font-dmsans text-[16px] text-brand-muted font-normal leading-[28px] tracking-[0px]">158 Jobs Opened</span>
+            <svg class="w-4 h-4 text-brand-dark group-hover:translate-x-1 group-hover:text-brand-orange transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CARD 4: Photography
+           ========================================== -->
+      <div class="w-full max-w-[333px] h-[268px] bg-white rounded-[8px] p-[30px] border border-[#EDEDED] hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+        <!-- 80x80 px Circle Background -->
+        <div class="w-[80px] h-[80px] rounded-full bg-brand-orange/10 flex items-center justify-center">
+          <img src="img/camera.png" alt="Photography" class="w-10 h-10 object-contain"
+               onerror="this.onerror=null; this.src='camera.png';" />
+        </div>
+        <!-- Bottom: Title ขยับขึ้นบน / Jobs & Arrow อยู่ที่เดิม -->
+        <div>
+          <h3 class="font-semibold text-[20px] leading-[32px] tracking-[0.2px] text-brand-dark group-hover:text-brand-orange transition-colors -translate-y-1.5">Photography</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="font-dmsans text-[16px] text-brand-muted font-normal leading-[28px] tracking-[0px]">95 Jobs Opened</span>
+            <svg class="w-4 h-4 text-brand-dark group-hover:translate-x-1 group-hover:text-brand-orange transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CARD 5: Copy Writing
+           ========================================== -->
+      <div class="w-full max-w-[333px] h-[268px] bg-white rounded-[8px] p-[30px] border border-[#EDEDED] hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+        <!-- 80x80 px Circle Background -->
+        <div class="w-[80px] h-[80px] rounded-full bg-brand-orange/10 flex items-center justify-center">
+          <img src="img/pencil.png" alt="Copy Writing" class="w-10 h-10 object-contain"
+               onerror="this.onerror=null; this.src='pencil.png';" />
+        </div>
+        <!-- Bottom: Title ขยับขึ้นบน / Jobs & Arrow อยู่ที่เดิม -->
+        <div>
+          <h3 class="font-semibold text-[20px] leading-[32px] tracking-[0.2px] text-brand-dark group-hover:text-brand-orange transition-colors -translate-y-1.5">Copy Writing</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="font-dmsans text-[16px] text-brand-muted font-normal leading-[28px] tracking-[0px]">113 Jobs Opened</span>
+            <svg class="w-4 h-4 text-brand-dark group-hover:translate-x-1 group-hover:text-brand-orange transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CARD 6: Music
+           ========================================== -->
+      <div class="w-full max-w-[333px] h-[268px] bg-white rounded-[8px] p-[30px] border border-[#EDEDED] hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+        <!-- 80x80 px Circle Background -->
+        <div class="w-[80px] h-[80px] rounded-full bg-brand-orange/10 flex items-center justify-center">
+          <img src="img/headset.png" alt="Music" class="w-10 h-10 object-contain"
+               onerror="this.onerror=null; this.src='headset.png';" />
+        </div>
+        <!-- Bottom: Title ขยับขึ้นบน / Jobs & Arrow อยู่ที่เดิม -->
+        <div>
+          <h3 class="font-semibold text-[20px] leading-[32px] tracking-[0.2px] text-brand-dark group-hover:text-brand-orange transition-colors -translate-y-1.5">Music</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="font-dmsans text-[16px] text-brand-muted font-normal leading-[28px] tracking-[0px]">55 Jobs Opened</span>
+            <svg class="w-4 h-4 text-brand-dark group-hover:translate-x-1 group-hover:text-brand-orange transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CARD 7: Human Resources
+           ========================================== -->
+      <div class="w-full max-w-[333px] h-[268px] bg-white rounded-[8px] p-[30px] border border-[#EDEDED] hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer">
+        <!-- 80x80 px Circle Background -->
+        <div class="w-[80px] h-[80px] rounded-full bg-brand-orange/10 flex items-center justify-center">
+          <img src="img/people.png" alt="Human Resources" class="w-10 h-10 object-contain"
+               onerror="this.onerror=null; this.src='people.png';" />
+        </div>
+        <!-- Bottom: Title ขยับขึ้นบน / Jobs & Arrow อยู่ที่เดิม -->
+        <div>
+          <h3 class="font-semibold text-[20px] leading-[32px] tracking-[0.2px] text-brand-dark group-hover:text-brand-orange transition-colors -translate-y-1.5">Human Resources</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="font-dmsans text-[16px] text-brand-muted font-normal leading-[28px] tracking-[0px]">25 Jobs Opened</span>
+            <svg class="w-4 h-4 text-brand-dark group-hover:translate-x-1 group-hover:text-brand-orange transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           CARD 8: Explore 30 More Categories
+           Vector Wave Lines: vector-1.svg ถึง vector-4.svg ในโฟลเดอร์ img/
+           Typography: Poppins 500, Size 24px, Line height 34px, Letter spacing 0.2px
+           ========================================== -->
+      <div class="relative w-full max-w-[333px] h-[268px] bg-brand-orange rounded-[8px] p-[30px] shadow-[0_8px_30px_rgba(255,131,69,0.3)] hover:shadow-[0_12px_36px_rgba(255,131,69,0.4)] transition-all duration-200 flex items-center justify-between overflow-hidden group cursor-pointer">
+        
+        <!-- เส้นเวกเตอร์ 4 เส้นจากโฟลเดอร์ img/ เรียงจากบนลงล่าง -->
+        <img src="img/vector-1.svg" alt="" class="absolute top-0 right-0 pointer-events-none opacity-40" />
+        <img src="img/vector-2.svg" alt="" class="absolute top-0 right-0 pointer-events-none opacity-40" />
+        <img src="img/vector-3.svg" alt="" class="absolute bottom-0 left-0 pointer-events-none opacity-40" />
+        <img src="img/vector-4.svg" alt="" class="absolute bottom-0 left-0 pointer-events-none opacity-40" />
+
+        <!-- Typography: 136px width, Poppins 500 24px/34px -->
+        <div class="relative z-10 w-[136px] pl-5">
+          <h3 class="font-medium text-[24px] leading-[34px] tracking-[0.2px] text-white">
+            Explore<br />
+            30 More<br />
+            Categories
+          </h3>
+        </div>
+
+        <!-- White Right Arrow -->
+        <div class="relative z-10 flex items-center justify-center pr-8 pt-8">
+          <svg class="w-5 h-5 text-white group-hover:translate-x-1.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Poppins"', 'sans-serif'],
+            dmsans: ['"DM Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              orange: '#FF8345',
+              dark: '#183B56',
+              muted: '#5A7184',
+              accounting: '#B3BAC5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
